@@ -19,6 +19,7 @@ Gem::Specification.new do |s|
   s.add_runtime_dependency 'spree_core', '~> 4.2', '>= 4.0.0'
   s.add_runtime_dependency 'cpf_cnpj', '>= 0.2', '>= 0.2.1'
 #  s.add_runtime_dependency 'jc-validates_timeliness', '~> 3.1', '>= 3.1.1'
+  s.add_runtime_dependency 'validates_timeliness', '~> 6.0.0.alpha1'
   s.add_runtime_dependency 'rest-client', '>= 1.8', '>= 1.8.0'
 
   s.add_development_dependency 'capybara', '>= 2.4'
