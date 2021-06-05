@@ -1,7 +1,7 @@
 module SpreeBrCommon
   module Spree
     module UserRegistrationsControllerDecorator
-      include Spree::BaseHelper
+      include Spree::BaseHelperDecorator
       def self.prepended(base)
         base.before_action :parse_date_of_birth, :only => [:create, :update]
       end
