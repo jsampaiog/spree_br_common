@@ -1,3 +1,4 @@
+module SpreeBrCommon
 module Spree
   module Api
     module ApiHelpers
@@ -11,3 +12,6 @@ module Spree
     end
   end
 end
+end
+
+::Spree::API::ApiHelpers.extend(SpreeBrCommon::Spree::Api::ApiHelpers)
