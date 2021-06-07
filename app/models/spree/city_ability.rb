@@ -1,6 +1,6 @@
 require 'cancan'
 
-class CityAbility
+class Spree::CityAbility
   include CanCan::Ability
 
   def initialize(user)
