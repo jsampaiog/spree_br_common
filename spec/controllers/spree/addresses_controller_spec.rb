@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe Spree::AddressesController, :type => :controller do
   context '#show', :vcr do
-    it 'shows the correct address' do
+    it 'shows the correct addresses' do
       api_get :show, {cep: '04089000'}
 
       expect(json_response['cep']).to eq('04089000')
