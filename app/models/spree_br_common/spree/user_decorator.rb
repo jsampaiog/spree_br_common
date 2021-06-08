@@ -5,14 +5,14 @@ module SpreeBrCommon::Spree::UserDecorator
   def self.prepended(base)
     base.validates_presence_of :phone
     base.validates :date_of_birth,
-                   presence: true,
+                   presence: false,
                    timeliness: {
                      on_or_before: lambda { 18.years.ago.at_end_of_day },
                      on_or_after: lambda { 100.years.ago.at_midnight },
                      type: :datetime
                    }
-    base.validates :cpf, presence: true
-    base.validates :first_name, :last_name, presence: true, length: { maximum: 100 }
+    base.validates :cpf, presence: false
+    base.validates :first_name, :last_name, presence: false, length: { maximum: 100 }
     base.validates :phone, :alternative_phone, length: { maximum: 11 }
     base.validate :valid_cpf
 

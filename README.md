@@ -28,6 +28,13 @@ Add spree_br_common to your Gemfile:
 ```ruby
 gem 'spree_br_common'
 ```
+Adapt you db/seeds.rb file. Your seed file should look like this:
+
+```shell
+Spree::Core::Engine.load_seed if defined?(Spree::Core)
+#Spree::Auth::Engine.load_seed if defined?(Spree::Auth)
+SpreeBrCommon::Engine.load_seed if defined?(SpreeBrCommon)
+```
 
 Bundle your dependencies and run the installation generator:
 

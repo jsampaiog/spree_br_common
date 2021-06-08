@@ -9,7 +9,7 @@ module SpreeBrCommon
       def parse_date_of_birth
         params[:spree_user][:date_of_birth] = DateTime.strptime(
           params[:spree_user][:date_of_birth],
-          Spree.t('date_picker.format', default: '%Y/%m/%d')
+          Spree.t('date_picker.format', default: '%d/%m/%Y')
         ) rescue ''
       end
     end
