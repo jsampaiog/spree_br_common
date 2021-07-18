@@ -1,3 +1,4 @@
+<!-- insert_top '#user-info' -->
 <dt><%= Spree.t(:full_name) %></dt>
 <dd><%= @user.full_name %></dd>
 <dt><%= Spree.t(:cpf) %></dt>
@@ -7,6 +8,6 @@
 <dt><%= Spree.t(:phone) %></dt>
 <dd><%= number_to_phone(@user.phone) %></dd>
 <% if @user.alternative_phone.present? %>
-  <dt><%= Spree.t(:alternative_phone) %></dt>
-  <dd><%= @user.alternative_phone %></dd>
+    <dt><%= Spree.t(:alternative_phone) %></dt>
+    <dd><%= @user.alternative_phone %></dd>
 <% end %>
